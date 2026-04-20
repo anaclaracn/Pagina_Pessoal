@@ -1,0 +1,299 @@
+/* ===========================
+   ANA CLARA — PÁGINA INICIAL
+   style.css
+   =========================== */
+
+/* ── RESET ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── VARIÁVEIS ── */
+:root {
+  --pink: #e0387a;
+  --pink2: #f285b0;
+  --pink-light: #fff0f6;
+  --pink-border: #f9bdd5;
+  --dark: #18040d;
+  --muted: #9e5e78;
+}
+
+/* ── BASE ── */
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--pink-light);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ── GRID DE FUNDO ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--pink-border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--pink-border) 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* ── BLOBS DECORATIVOS ── */
+.blob {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(80px);
+  opacity: 0.18;
+}
+
+.blob-1 {
+  width: 500px;
+  height: 500px;
+  background: var(--pink);
+  top: -150px;
+  right: -100px;
+}
+
+.blob-2 {
+  width: 400px;
+  height: 400px;
+  background: var(--pink2);
+  bottom: -120px;
+  left: -80px;
+}
+
+/* ── WRAPPER CENTRAL ── */
+.wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem 1.5rem;
+  width: 100%;
+  max-width: 860px;
+}
+
+/* ── CABEÇALHO ── */
+.header {
+  text-align: center;
+}
+
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(224, 56, 122, 0.12);
+  color: var(--pink);
+  border: 1px solid var(--pink-border);
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.35rem 1rem;
+  margin-bottom: 1.2rem;
+}
+
+/* ponto piscante na pill */
+.tag-pill::before {
+  content: '●';
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+.header h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2.2rem, 6vw, 3.8rem);
+  font-weight: 800;
+  color: var(--dark);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.header h1 span {
+  color: var(--pink);
+}
+
+.header p {
+  margin-top: 0.8rem;
+  color: var(--muted);
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+/* ── GRID DE CARDS ── */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* ── CARD ── */
+.card {
+  background: #fff;
+  border: 1.5px solid var(--pink-border);
+  border-radius: 28px;
+  padding: 2.5rem 2rem;
+  text-decoration: none;
+  color: var(--dark);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.35s cubic-bezier(.22, .68, 0, 1.2),
+    box-shadow 0.35s,
+    border-color 0.3s;
+  cursor: pointer;
+}
+
+/* overlay degradê no hover */
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(224, 56, 122, 0.06) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 24px 60px rgba(224, 56, 122, 0.18);
+  border-color: var(--pink);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* ── BARRA SUPERIOR DO CARD ── */
+.bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 28px 28px 0 0;
+  background: linear-gradient(90deg, var(--pink), var(--pink2));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(.22, .68, 0, 1.2);
+}
+
+.card:hover .bar {
+  transform: scaleX(1);
+}
+
+/* ── ÍCONE DO CARD ── */
+.card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  background: rgba(224, 56, 122, 0.1);
+  border: 1px solid var(--pink-border);
+  transition: background 0.3s, transform 0.3s;
+}
+
+.card:hover .card-icon {
+  background: linear-gradient(135deg, var(--pink), var(--pink2));
+  transform: rotate(-6deg) scale(1.1);
+}
+
+/* ── TEXTOS DO CARD ── */
+.card-fw {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--dark);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.card-desc {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.65;
+  flex: 1;
+}
+
+/* ── CHIPS DE TECNOLOGIA ── */
+.card-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.chip {
+  font-size: 0.7rem;
+  font-weight: 500;
+  border: 1px solid var(--pink-border);
+  color: var(--muted);
+  border-radius: 50px;
+  padding: 0.2rem 0.65rem;
+  background: var(--pink-light);
+}
+
+/* ── CTA DO CARD ── */
+.card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--pink);
+  margin-top: 0.4rem;
+  transition: gap 0.2s;
+}
+
+.card:hover .card-cta {
+  gap: 14px;
+}
+
+.card-cta svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* ── RODAPÉ ── */
+.footer-note {
+  font-size: 0.78rem;
+  color: var(--muted);
+  opacity: 0.7;
+  text-align: center;
+}
+
+/* ── RESPONSIVO ── */
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  body {
+    overflow-y: auto;
+    justify-content: flex-start;
+    padding-top: 3rem;
+  }
+}

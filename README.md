@@ -11,6 +11,13 @@ O projeto foi desenvolvido em **duas versões distintas**, cada uma utilizando u
 
 ---
 
+## 🌐 Acesso
+
+Você pode visualizar o projeto finalizado e navegar pelas versões disponíveis através do link abaixo:
+👉 [https://anaclaracn.github.io/Pagina_Pessoal/](https://anaclaracn.github.io/Pagina_Pessoal/)
+
+---
+
 ## 👩‍💻 Sobre a Estudante
 
 | Campo | Informação |

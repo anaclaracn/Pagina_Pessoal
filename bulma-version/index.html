@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ana Clara | Engenheira de Software</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="site-nav navbar" role="navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#">
+        <strong>Ana Clara.</strong>
+      </a>
+      <a role="button" class="navbar-burger" id="navBurger" aria-label="menu">
+        <span></span><span></span><span></span>
+      </a>
+    </div>
+    <div class="navbar-menu" id="navMenu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#sobre">Sobre</a>
+        <a class="navbar-item" href="#experiencia">Experiência</a>
+        <a class="navbar-item" href="#projetos">Projetos</a>
+        <a class="navbar-item" href="#formacao">Formação</a>
+        <a class="navbar-item" href="#contato">Contato</a>
+        <div class="navbar-item">
+          <button class="theme-toggle" id="themeToggle">
+            <i class="fas fa-moon" id="themeIcon"></i>
+            <span id="themeLabel">Escuro</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid-deco"></div>
+  <div class="hero-blob"></div>
+  <div class="container" style="position:relative;z-index:1">
+    <div class="columns is-vcentered is-variable is-6">
+      <div class="column is-6">
+        <div class="hero-tag-pill">Disponível para oportunidades</div>
+        <h1 class="hero-heading">
+          Ana<br>
+          <span class="highlight">Clara</span><br>
+          Nascimento
+        </h1>
+        <p class="hero-subtitle">Engenheira de Software Backend apaixonada por construir sistemas escaláveis e soluções de dados que impactam milhões de pessoas.</p>
+        <div class="hero-metrics">
+          <div>
+            <div class="metric-val">7°</div>
+            <div class="metric-lbl">Período</div>
+          </div>
+          <div>
+            <div class="metric-val">2+</div>
+            <div class="metric-lbl">Anos Exp.</div>
+          </div>
+          <div>
+            <div class="metric-val">17+</div>
+            <div class="metric-lbl">Projetos</div>
+          </div>
+        </div>
+        <div class="hero-actions">
+          <a href="#contato" class="btn-primary-custom"><i class="fas fa-envelope"></i> Entrar em Contato</a>
+          <a href="https://github.com/anaclaracn" target="_blank" class="btn-secondary-custom"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </div>
+      <div class="column is-6">
+        <div class="hero-visual">
+          <div class="hero-avatar-box">
+            <div class="avatar-initials-big">AC</div>
+            <div class="floating-chip chip-top-right">🎓 UFLA · 7° Período</div>
+            <div class="floating-chip chip-bottom-left">🚀 Engenheira Backend</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="page-section alt">
+  <div class="container">
+    <div class="columns is-variable is-6 is-vcentered">
+      <div class="column is-5 reveal">
+        <p class="section-eyebrow">Quem sou eu</p>
+        <h2 class="section-heading">Uma dev que ama resolver problemas complexos</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="column is-7 reveal">
+        <p class="about-text mb-4">Olá! Sou Ana Clara, estudante do 7° período de Ciência da Computação na <strong style="color:var(--text)">Universidade Federal de Lavras (UFLA)</strong>. Atualmente estagio como <strong style="color:var(--text)">Engenheira de Software Backend no iFood</strong>, maior app de delivery da América Latina.</p>
+        <p class="about-text mb-4">Tive minha primeira experiência profissional na <strong style="color:var(--text)">Levty</strong>, onde trabalhei no desenvolvimento de software. Também fui membro da <strong style="color:var(--text)">Comp Jr (UFLA)</strong>, empresa júnior onde entreguei projetos reais para clientes externos.</p>
+        <p class="about-text mb-5">Me interesso por arquitetura backend, APIs de alta performance, bancos de dados e ciência de dados aplicada.</p>
+        <p class="section-eyebrow mb-3">Stack & Ferramentas</p>
+        <div>
+          <span class="skill-pill">Python</span>
+          <span class="skill-pill">Java</span>
+          <span class="skill-pill">SQL</span>
+          <span class="skill-pill">REST APIs</span>
+          <span class="skill-pill">Git</span>
+          <span class="skill-pill">Docker</span>
+          <span class="skill-pill">Spring Boot</span>
+          <span class="skill-pill">Data Analysis</span>
+          <span class="skill-pill">JavaScript</span>
+          <span class="skill-pill">HTML/CSS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIÊNCIA -->
+<section id="experiencia" class="page-section">
+  <div class="container">
+    <div class="has-text-centered mb-6 reveal">
+      <p class="section-eyebrow">Trajetória</p>
+      <h2 class="section-heading">Experiências</h2>
+      <div class="section-line" style="margin: 1rem auto 0"></div>
+    </div>
+    <div class="columns is-multiline is-variable is-4">
+      <div class="column is-6 reveal">
+        <div class="custom-card">
+          <div class="card-accent-bar"></div>
+          <div class="status-dot">Atual</div>
+          <div class="card-company">iFood</div>
+          <div class="card-role">Engenheira de Software Backend (Estágio)</div>
+          <div class="card-period"><i class="far fa-calendar-alt"></i> 2024 — Presente</div>
+          <p class="card-body-text">Desenvolvimento e manutenção de serviços backend de alta escala em arquiteturas distribuídas que suportam milhões de pedidos diários no maior app de delivery da América Latina.</p>
+          <div class="mt-3">
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">Spring Boot</span>
+            <span class="tech-tag">Kafka</span>
+            <span class="tech-tag">Microsserviços</span>
+            <span class="tech-tag">AWS</span>
+          </div>
+        </div>
+      </div>
+      <div class="column is-6 reveal">
+        <div class="custom-card">
+          <div class="card-company">Levty</div>
+          <div class="card-role">Estagiária de Desenvolvimento de Software</div>
+          <div class="card-period"><i class="far fa-calendar-alt"></i> 2023 — 2024</div>
+          <p class="card-body-text">Desenvolvimento de soluções de software para clientes empresariais em equipe ágil, com foco em qualidade de código, testes automatizados e entregas contínuas.</p>
+          <div class="mt-3">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">SQL</span>
+            <span class="tech-tag">APIs REST</span>
+            <span class="tech-tag">Scrum</span>
+          </div>
+        </div>
+      </div>
+      <div class="column is-6 reveal">
+        <div class="custom-card">
+          <div class="card-company">Comp Jr — UFLA</div>
+          <div class="card-role">Membra de Desenvolvimento</div>
+          <div class="card-period"><i class="far fa-calendar-alt"></i> 2022 — 2023</div>
+          <p class="card-body-text">Participação em projetos reais para clientes externos na empresa júnior do curso de Computação da UFLA, do levantamento de requisitos à entrega final.</p>
+          <div class="mt-3">
+            <span class="tech-tag">HTML/CSS</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Gestão de Projetos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJETOS -->
+<section id="projetos" class="page-section alt">
+  <div class="container">
+    <div class="has-text-centered mb-6 reveal">
+      <p class="section-eyebrow">O que construí</p>
+      <h2 class="section-heading">Projetos em Destaque</h2>
+      <div class="section-line" style="margin: 1rem auto 0"></div>
+    </div>
+    <div class="columns is-multiline is-variable is-4">
+      <div class="column is-4 reveal">
+        <div class="custom-card alt">
+          <div class="card-icon-wrap">⚖️</div>
+          <div class="card-company">Site Jurídica Jr</div>
+          <p class="card-body-text">Site institucional desenvolvido para empresa jurídica cliente da Comp Jr UFLA, com apresentação de serviços, identidade visual e formulário de contato.</p>
+          <div class="mt-3">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+        </div>
+      </div>
+      <div class="column is-4 reveal">
+        <div class="custom-card alt">
+          <div class="card-icon-wrap">📊</div>
+          <div class="card-company">Análise de Dados — UFLA</div>
+          <p class="card-body-text">Projetos acadêmicos de análise e visualização de dados, aplicando técnicas de processamento, limpeza e análise exploratória para extração de insights.</p>
+          <div class="mt-3">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Pandas</span>
+            <span class="tech-tag">Matplotlib</span>
+            <span class="tech-tag">SQL</span>
+          </div>
+        </div>
+      </div>
+      <div class="column is-4 reveal">
+        <div class="custom-card alt">
+          <div class="card-icon-wrap">🍔</div>
+          <div class="card-company">Backend de Alta Escala</div>
+          <p class="card-body-text">Serviços backend no iFood para sistemas que processam grandes volumes de requisições em produção real, com alta disponibilidade e resiliência.</p>
+          <div class="mt-3">
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">Spring</span>
+            <span class="tech-tag">Kafka</span>
+            <span class="tech-tag">AWS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="has-text-centered mt-5 reveal">
+      <a href="https://github.com/anaclaracn" target="_blank" class="btn-secondary-custom">
+        <i class="fab fa-github"></i> Ver todos no GitHub
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FORMAÇÃO -->
+<section id="formacao" class="page-section">
+  <div class="container">
+    <div class="has-text-centered mb-6 reveal">
+      <p class="section-eyebrow">Acadêmico</p>
+      <h2 class="section-heading">Formação</h2>
+      <div class="section-line" style="margin: 1rem auto 0"></div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8 reveal">
+        <div class="edu-block">
+          <div class="edu-inner">
+            <div class="edu-icon-wrap">🎓</div>
+            <div>
+              <div class="edu-degree">Bacharelado em Ciência da Computação</div>
+              <div class="edu-inst">Universidade Federal de Lavras — UFLA · Lavras, MG</div>
+              <div class="edu-period">7° Período · Previsão de conclusão: 2026</div>
+              <p style="color:var(--muted); font-size:0.9rem; line-height:1.8; margin-top:1rem">Formação sólida em algoritmos, estruturas de dados, engenharia de software, banco de dados, redes e sistemas distribuídos. Participação ativa em empresa júnior e projetos de pesquisa na área de dados.</p>
+              <div class="mt-3">
+                <span class="skill-pill">Algoritmos</span>
+                <span class="skill-pill">Eng. de Software</span>
+                <span class="skill-pill">Banco de Dados</span>
+                <span class="skill-pill">Redes</span>
+                <span class="skill-pill">Sistemas Distribuídos</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="page-section alt">
+  <div class="container">
+    <div class="has-text-centered mb-6 reveal">
+      <p class="section-eyebrow">Vamos conversar</p>
+      <h2 class="section-heading">Contato</h2>
+      <div class="section-line" style="margin: 1rem auto 0"></div>
+      <p style="color:var(--muted); margin-top:1rem; max-width:480px; margin-left:auto; margin-right:auto">Aberta a novas oportunidades, colaborações e bate-papos sobre tecnologia.</p>
+    </div>
+    <div class="columns is-centered is-variable is-4 is-multiline">
+      <div class="column is-5 reveal">
+        <a href="mailto:ana.nascimento12@estudante.ufla.br" class="contact-link">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <div class="contact-lbl">Email</div>
+            <div class="contact-val">ana.nascimento12@estudante.ufla.br</div>
+          </div>
+        </a>
+      </div>
+      <div class="column is-5 reveal">
+        <a href="https://github.com/anaclaracn" target="_blank" class="contact-link">
+          <div class="contact-icon"><i class="fab fa-github"></i></div>
+          <div>
+            <div class="contact-lbl">GitHub</div>
+            <div class="contact-val">github.com/anaclaracn</div>
+          </div>
+        </a>
+      </div>
+      <div class="column is-5 reveal">
+        <a href="https://ufla.br" target="_blank" class="contact-link">
+          <div class="contact-icon"><i class="fas fa-university"></i></div>
+          <div>
+            <div class="contact-lbl">Universidade</div>
+            <div class="contact-val">UFLA — Lavras, MG</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <p>Desenvolvido com ❤️ por <strong>Ana Clara Nascimento</strong> · Ciência da Computação UFLA</p>
+  <p style="opacity:0.5; font-size:0.75rem; margin-top:0.4rem">Versão Bulma · 2025</p>
+</footer>
+
+<div class="fw-badge">Bulma CSS</div>
+
+<script src="script.js"></script>
+</body>
+</html>

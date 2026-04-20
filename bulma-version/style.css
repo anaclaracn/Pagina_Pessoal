@@ -1,35 +1,35 @@
 /* ===========================
    ANA CLARA — BULMA VERSION
-   style.css
+   style.css — Paleta Rosa
    =========================== */
 
 /* ── CSS VARIABLES (Temas) ── */
 :root {
-  --bg: #f0f4ff;
+  --bg: #fff0f6;
   --surface: #ffffff;
-  --surface2: #e8edf8;
-  --text: #0d1220;
-  --muted: #6b7592;
-  --accent: #3b5bdb;
-  --accent2: #748ffc;
-  --accent-light: #dbe4ff;
-  --border: #d4daf0;
-  --nav-bg: rgba(240, 244, 255, 0.92);
-  --card-shadow: 0 4px 24px rgba(59, 91, 219, 0.08);
+  --surface2: #ffe3ef;
+  --text: #18040d;
+  --muted: #9e5e78;
+  --accent: #e0387a;
+  --accent2: #f285b0;
+  --accent-light: #ffd6e7;
+  --border: #f9bdd5;
+  --nav-bg: rgba(255, 240, 246, 0.93);
+  --card-shadow: 0 4px 24px rgba(224, 56, 122, 0.09);
 }
 
 [data-theme="dark"] {
-  --bg: #0a0d18;
-  --surface: #111526;
-  --surface2: #181d30;
-  --text: #e8ecff;
-  --muted: #8892b0;
-  --accent: #748ffc;
-  --accent2: #91a7ff;
-  --accent-light: #1c2340;
-  --border: #1e2540;
-  --nav-bg: rgba(10, 13, 24, 0.95);
-  --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  --bg: #140008;
+  --surface: #210010;
+  --surface2: #2f0019;
+  --text: #ffecf4;
+  --muted: #d490aa;
+  --accent: #f2508e;
+  --accent2: #f799be;
+  --accent-light: #3d0020;
+  --border: #500030;
+  --nav-bg: rgba(20, 0, 8, 0.96);
+  --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
 }
 
 /* ── RESET & BASE ── */
@@ -78,12 +78,10 @@ body {
   background: transparent !important;
 }
 
-/* Burger lines */
 .navbar-burger span {
   background: var(--text);
 }
 
-/* Navbar menu (mobile) */
 .navbar-menu.is-active {
   background: var(--nav-bg);
   border-top: 1px solid var(--border);
@@ -128,7 +126,7 @@ body {
     linear-gradient(var(--border) 1px, transparent 1px),
     linear-gradient(90deg, var(--border) 1px, transparent 1px);
   background-size: 60px 60px;
-  opacity: 0.4;
+  opacity: 0.5;
   pointer-events: none;
 }
 
@@ -140,7 +138,7 @@ body {
   height: 600px;
   border-radius: 50%;
   background: radial-gradient(circle, var(--accent) 0%, transparent 65%);
-  opacity: 0.08;
+  opacity: 0.1;
   pointer-events: none;
 }
 
@@ -201,7 +199,7 @@ body {
 
 /* ── BUTTONS ── */
 .btn-primary-custom {
-  background: var(--accent);
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
   color: #fff;
   border: none;
   padding: 0.85rem 2.2rem;
@@ -221,7 +219,7 @@ body {
   background: var(--text);
   color: var(--bg);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(59, 91, 219, 0.3);
+  box-shadow: 0 8px 24px rgba(224, 56, 122, 0.35);
 }
 
 .btn-secondary-custom {
@@ -255,32 +253,46 @@ body {
 
 .hero-avatar-box {
   width: 340px;
-  height: 400px;
+  height: 420px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 1rem;
+  justify-content: flex-end;
+  gap: 0;
   box-shadow: var(--card-shadow);
   position: relative;
+  overflow: hidden;
+  margin-left: 15rem;
 }
 
-.avatar-initials-big {
-  font-family: 'Syne', sans-serif;
-  font-size: 5rem;
-  font-weight: 800;
-  color: var(--accent);
-  opacity: 0.3;
+.hero-avatar-box img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 32px;
 }
 
 .avatar-info {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 100%);
+  padding: 2rem 1.2rem 1.2rem;
   font-size: 0.85rem;
-  color: var(--muted);
+  color: #fff;
   text-align: center;
   line-height: 1.5;
+  border-radius: 0 0 32px 32px;
+}
+
+.avatar-info strong {
+  color: #fff !important;
 }
 
 .floating-chip {
@@ -299,14 +311,14 @@ body {
 }
 
 .chip-top-right {
-  top: -12px;
-  right: -20px;
+  top: 0px;
+  right: -16px;
 }
 
 .chip-bottom-left {
-  bottom: -12px;
-  left: -20px;
-  background: var(--accent);
+  bottom: 0px;
+  left: -16px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
   color: #fff;
   border-color: transparent;
 }
@@ -363,7 +375,7 @@ body {
 .section-line {
   width: 40px;
   height: 4px;
-  background: var(--accent);
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
   border-radius: 4px;
   margin-top: 1rem;
 }
@@ -406,7 +418,7 @@ body {
 
 .custom-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 50px rgba(59, 91, 219, 0.12);
+  box-shadow: 0 20px 50px rgba(224, 56, 122, 0.14);
   border-color: var(--accent2);
 }
 
@@ -480,7 +492,7 @@ body {
   gap: 5px;
   font-size: 0.72rem;
   font-weight: 600;
-  color: #22c55e;
+  color: #e8508a;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   margin-bottom: 0.6rem;
@@ -509,7 +521,7 @@ body {
 .edu-icon-wrap {
   width: 60px;
   height: 60px;
-  background: var(--accent);
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
   border-radius: 16px;
   display: flex;
   align-items: center;
@@ -556,7 +568,7 @@ body {
 .contact-link:hover {
   border-color: var(--accent);
   color: var(--accent);
-  box-shadow: 0 8px 30px rgba(59, 91, 219, 0.15);
+  box-shadow: 0 8px 30px rgba(224, 56, 122, 0.15);
   transform: translateY(-2px);
 }
 
@@ -611,7 +623,7 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: var(--accent);
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
   color: #fff;
   font-size: 0.72rem;
   font-weight: 700;
@@ -620,7 +632,7 @@ body {
   padding: 0.4rem 0.9rem;
   border-radius: 50px;
   z-index: 999;
-  box-shadow: 0 4px 16px rgba(59, 91, 219, 0.4);
+  box-shadow: 0 4px 16px rgba(224, 56, 122, 0.45);
 }
 
 /* ── RESPONSIVE ── */
@@ -628,6 +640,7 @@ body {
   .hero-avatar-box {
     width: 260px;
     height: 300px;
+    margin-left: 0rem;
   }
 
   .hero-actions {
@@ -653,7 +666,6 @@ body {
   margin-right: 0;
 }
 
-/* Fix Bulma's default white navbar */
 .navbar,
 .navbar-menu,
 .navbar-item,

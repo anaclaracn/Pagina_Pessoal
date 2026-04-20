@@ -1,31 +1,26 @@
-/* ===========================
-   ANA CLARA — BOOTSTRAP VERSION
-   style.css
-   =========================== */
-
 /* ── CSS VARIABLES (Temas) ── */
 :root {
-  --bg: #faf7f4;
+  --bg: #ffd4e1;
   --surface: #ffffff;
-  --surface2: #f0ebe4;
-  --text: #1a1208;
-  --muted: #7a6e5f;
-  --accent: #c8522a;
-  --accent2: #e8a87c;
-  --border: #e2d9ce;
-  --nav-bg: rgba(250, 247, 244, 0.92);
+  --surface2: #ffe8f0;
+  --text: #1a0810;
+  --muted: #8a5f6e;
+  --accent: #d63a72;
+  --accent2: #f285aa;
+  --border: #f5cedd;
+  --nav-bg: rgba(255, 245, 248, 0.92);
 }
 
 [data-theme="dark"] {
-  --bg: #100e0b;
-  --surface: #1c1814;
-  --surface2: #252017;
-  --text: #f5f0e8;
-  --muted: #9e9280;
-  --accent: #e8704a;
-  --accent2: #c8895c;
-  --border: #2e2820;
-  --nav-bg: rgba(16, 14, 11, 0.95);
+  --bg: #130008;
+  --surface: #200010;
+  --surface2: #2e0018;
+  --text: #ffeef4;
+  --muted: #c48fa0;
+  --accent: #f0558a;
+  --accent2: #f799bb;
+  --border: #4a0025;
+  --nav-bg: rgba(19, 0, 8, 0.96);
 }
 
 /* ── RESET & BASE ── */
@@ -111,8 +106,21 @@ body {
   height: 520px;
   border-radius: 50%;
   background: radial-gradient(circle, var(--accent2) 0%, transparent 70%);
-  opacity: 0.18;
+  opacity: 0.22;
   pointer-events: none;
+}
+
+/* segundo blob decorativo */
+.hero-deco::after {
+  content: '';
+  position: absolute;
+  bottom: -200px;
+  left: -300px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent) 0%, transparent 65%);
+  opacity: 0.1;
 }
 
 .hero-tag {
@@ -170,6 +178,7 @@ body {
   background: var(--text);
   color: var(--bg);
   transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(214, 58, 114, 0.4);
 }
 
 .hero-outline-btn {
@@ -210,12 +219,20 @@ body {
   margin: auto;
 }
 
+.hero-profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  object-position: center; 
+  display: block;
+}
+
 .hero-initials {
   font-family: 'Playfair Display', serif;
   font-size: 6rem;
   font-weight: 900;
   color: var(--accent);
-  opacity: 0.35;
+  opacity: 0.3;
   user-select: none;
 }
 
@@ -230,7 +247,7 @@ body {
   font-size: 0.78rem;
   font-weight: 600;
   line-height: 1.4;
-  box-shadow: 0 8px 24px rgba(200, 82, 42, 0.35);
+  box-shadow: 0 8px 24px rgba(214, 58, 114, 0.4);
 }
 
 .hero-stats {
@@ -300,7 +317,7 @@ section {
 .divider {
   width: 48px;
   height: 3px;
-  background: var(--accent);
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
   border-radius: 4px;
   margin-top: 1rem;
   margin-bottom: 2.5rem;
@@ -351,13 +368,13 @@ section {
   left: 0;
   width: 4px;
   height: 100%;
-  background: var(--accent);
+  background: linear-gradient(180deg, var(--accent), var(--accent2));
   border-radius: 4px 0 0 4px;
 }
 
 .exp-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 16px 40px rgba(214, 58, 114, 0.12);
 }
 
 .exp-company {
@@ -412,14 +429,14 @@ section {
 
 .proj-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 16px 40px rgba(214, 58, 114, 0.12);
   border-color: var(--accent);
 }
 
 .proj-icon {
   width: 48px;
   height: 48px;
-  background: var(--accent);
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
   border-radius: 14px;
   display: flex;
   align-items: center;
@@ -508,6 +525,7 @@ section {
   border-color: var(--accent);
   color: var(--accent);
   transform: translateX(6px);
+  box-shadow: 0 8px 30px rgba(214, 58, 114, 0.12);
 }
 
 .contact-icon {
@@ -542,7 +560,6 @@ footer {
   text-align: center;
   padding: 2.5rem 1rem;
   font-size: 0.85rem;
-  opacity: 0.9;
 }
 
 /* ── SCROLL ANIMATION ── */
@@ -562,7 +579,7 @@ footer {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: var(--accent);
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
   color: #fff;
   font-size: 0.72rem;
   font-weight: 700;
@@ -571,7 +588,7 @@ footer {
   padding: 0.4rem 0.9rem;
   border-radius: 50px;
   z-index: 999;
-  box-shadow: 0 4px 16px rgba(200, 82, 42, 0.4);
+  box-shadow: 0 4px 16px rgba(214, 58, 114, 0.45);
 }
 
 /* ── RESPONSIVE ── */
